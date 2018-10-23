@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Uses a ScrollView with Constraints to appropriately place fields, labels, and confirmation button-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegistrationActivity">
+
+        <!-- Page Title Text View-->
+        <TextView
+            android:id="@+id/register_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <!--First Name Text-->
+        <TextView
+            android:id="@+id/first_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name_tv_text"
+            android:textSize="@dimen/text_view_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_text" />
+
+        <!--First Name Text Box-->
+        <EditText
+            android:id="@+id/first_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_name_hint"
+            android:inputType="text"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/first_name_text" />
+
+        <!--Family Name Text-->
+        <TextView
+            android:id="@+id/family_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/family_name_tv_text"
+            android:textSize="@dimen/text_view_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_name_text_view" />
+
+        <!--Family Name Text Box-->
+        <EditText
+            android:id="@+id/family_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/family_name_hint"
+            android:inputType="text"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/family_name_text" />
+
+        <!--Date Of Birth Text-->
+        <TextView
+            android:id="@+id/dob_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dob_tv_text"
+            android:textSize="@dimen/text_view_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/family_name_text_view" />
+
+        <!--Date Of Birth Text Box-->
+        <EditText
+            android:id="@+id/date_of_birth_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dob_hint"
+            android:inputType="date"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/dob_text" />
+
+        <!--Email Text-->
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_tv_text"
+            android:textSize="@dimen/text_view_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_of_birth_text_view" />
+
+        <!--Email Text Box-->
+        <EditText
+            android:id="@+id/email_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/email_text" />
+
+        <!--Password Text-->
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password_tv_text"
+            android:textSize="@dimen/text_view_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_text_view" />
+
+        <!--Password Text Box-->
+        <EditText
+            android:id="@+id/password_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/password_text" />
+
+        <!--Confirm Password Text-->
+        <TextView
+            android:id="@+id/confirm_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_password_tv_text"
+            android:textSize="@dimen/text_view_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_text_view" />
+
+        <!--Confirm Password Text Box-->
+        <EditText
+            android:id="@+id/confirm_password_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/confirm_password_hint"
+            android:inputType="textPassword"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/confirm_password_text" />
+
+        <!--Confirm Data Button For Validation-->
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_btn_text"
+            android:onClick="confirm_information"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirm_password_text_view"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

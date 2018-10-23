@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".QuizStartActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Starts the quiz-->
+        <Button
+            android:id="@+id/start_quiz_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_quiz_btn_text"
+            android:textSize="@dimen/text_view_size"
+            android:onClick="start_quiz" />
+
+        <!--Displays the rules-->
+        <Button
+            android:id="@+id/rules_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rules_btn_text"
+            android:textSize="@dimen/text_view_size"
+            android:onClick="show_rules"
+            app:layout_constraintTop_toBottomOf="@+id/start_quiz_btn"/>
+
+        <!--Shows the all time scores received by the user on the quiz-->
+        <Button
+            android:id="@+id/show_stats_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_stats_btn_text"
+            android:textSize="@dimen/text_view_size"
+            android:onClick="show_stats"
+            app:layout_constraintTop_toBottomOf="@+id/rules_btn"/>
+
+        <!--Logs the user out-->
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout_btn_text"
+            android:textSize="@dimen/text_view_size"
+            android:onClick="logout"
+            app:layout_constraintTop_toBottomOf="@+id/show_stats_btn"/>
+
+        <!--Displays the rules and all time scores-->
+        <TextView
+            android:id="@+id/show_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintTop_toBottomOf="@id/logout_btn" />
+
+        <!--Displays the result of the quiz-->
+        <TextView
+            android:id="@+id/show_stats_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/stats_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logout_btn"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
